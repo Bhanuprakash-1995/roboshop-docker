@@ -5,13 +5,13 @@ networks:
 services:
   mongodb:
     image: mongodb:1
-    networks:
-    - reboshop 
+    # networks:
+    # - reboshop 
 
   catalogue:
     image: catalogue:1
-    networks:
-    - roboshop
+    # networks:
+    # - roboshop
     depends_on: 
     - mongodb
   
@@ -19,7 +19,7 @@ services:
     image: web:1
     ports: 
     - "80:80"
-    networks:
-    - roboshop
+    # networks:
+    # - roboshop
     depends_on:
     - catalogue
